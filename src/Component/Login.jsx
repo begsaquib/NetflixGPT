@@ -1,13 +1,27 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import Header from "./Header";
+import { checkValidateData } from "../utils/Validate";
 
 const Login = () => {
-   const [isSignin,setIsSignin]=useState(true)
+  const [isSignin, setIsSignin] = useState(true);
+  const [errormessege, setErrormessege] = useState(null);
 
-   const togglesigninform=()=>{
-    setIsSignin(!isSignin)
-   }
+  const email = useRef(null);
+  const password = useRef(null);
 
+  const togglesigninform = () => {
+    setIsSignin(!isSignin);
+  };
+  const HandlebuttonClick = () => {
+    //validate the form data
+    
+    const messege = checkValidateData(
+      email.current.value,
+      password.current.value
+    );
+    console.log(messege);
+    setErrormessege(messege);
+  };
 
   return (
     <div>
@@ -18,28 +32,44 @@ const Login = () => {
           alt=""
         />
       </div>
-      <form className="absolute w-3/12 p-12 bg-black m-[13rem] mx-auto right-0 left-0 text-white rounded-lg bg-opacity-80">
-        <h1 className="text-3xl font-bold mb-4">{isSignin ? "Sign in" : "Sign Up"}</h1>
-        {!isSignin &&<input
-          type="text"
-          placeholder="Full Name"
-          className="p-2  my-2 w-full bg-gray-700"
-        />}
+      <form
+        onSubmit={(e) => e.preventDefault()}
+        className="absolute w-3/12 p-12 bg-black m-[13rem] mx-auto right-0 left-0 text-white rounded-lg bg-opacity-80"
+      >
+        <h1 className="text-3xl font-bold mb-4">
+          {isSignin ? "Sign in" : "Sign Up"}
+        </h1>
+        {!isSignin && (
+          <input
+            type="text"
+            placeholder="Full Name"
+            className="p-2  my-2 w-full bg-gray-700"
+          />
+        )}
         <input
+          ref={email}
           type="text"
           placeholder="Email Address"
           className="p-2  my-2 w-full bg-gray-700"
         />
         <input
-          type="text"
+          ref={password}
+          type="password"
           placeholder="Password"
           className="p-2  my-2 w-full bg-gray-700"
         />
-        <button className="p-4 my-4 w-full bg-red-700 rounded-lg">
-        {isSignin ? "Sign in" : "Sign Up"}
+        <p className="text-red-600 text-xl ">{errormessege}</p>
+        <button
+          className="p-4 my-4 w-full bg-red-700 rounded-lg"
+          onClick={HandlebuttonClick}
+        >
+          {isSignin ? "Sign in" : "Sign Up"}
         </button>
-        <p className="p-4 cursor-pointer" onClick={togglesigninform}
-        >{isSignin ? "New to Netflix? Sign up now" : "Already a Memebr? Sign in now"}</p>
+        <p className="p-4 cursor-pointer" onClick={togglesigninform}>
+          {isSignin
+            ? "New to Netflix? Sign up now"
+            : "Already a Memebr? Sign in now"}
+        </p>
       </form>
     </div>
   );
