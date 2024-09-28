@@ -9,3 +9,6 @@ NETFLIX-GPT
 -sign form 
 -form validation
 -useRef hook
+-firebase setup
+-deploying our app to production
+-Creating signUp user account
