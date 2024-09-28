@@ -12,3 +12,5 @@ NETFLIX-GPT
 -firebase setup
 -deploying our app to production
 -Creating signUp user account
+-implement sign in user api
+-created redux store with slice
