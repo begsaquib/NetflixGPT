@@ -14,3 +14,11 @@ NETFLIX-GPT
 -Creating signUp user account
 -implement sign in user api
 -created redux store with slice
+-implemented sign out
+-updated profile
+-Bugfix- signup user, user display name profile picture update
+-Bugfix- if the user is not logged in redirect/browse to login page and vice versa
+-unsubscribed to the onAuthStateChanged callback
+-add hardcoded values to the constants file
+-fetch movies of TMDB 
+-
