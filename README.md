@@ -23,4 +23,37 @@ NETFLIX-GPT
 -register tmdb API create an app && get an access token
 -get data from tmdb now playing movies list
 -fetch movies of TMDB 
--
+-custom hook created for now playing movies
+-updated store with movies data
+-created movie slice
+-planning for main and secondary container
+-fetch data for trailer video
+-update store with trailer video data
+- embedded the youtube video and make it autoplay and mute
+- tailwind used to make ui look awesome
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// PLANNING OF SECONDARY CONTAINER
+
+--Movielist--popular
+--Movielist--nowplaying
+--Movielist--trending
+--Movielist--horror
+
+
+
+
+
