@@ -1,0 +1,23 @@
+import { useSelector } from "react-redux";
+import useTrailerVideo from "../customhook/useTrailerVideo";
+
+const VideoBg = ({ movieId }) => {
+  const VideoTrailer = useSelector((store) => store.movies.VideoTrailer);
+  useTrailerVideo(movieId);
+  return (
+    <div>
+      <iframe
+        width="560"
+        height="315"
+        src={
+          "https://www.youtube.com/embed/4CLE3pWAAr8?si=" + VideoTrailer?.key
+        }
+        title="YouTube video player"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowFullScreen
+      ></iframe>
+    </div>
+  );
+};
+
+export default VideoBg;

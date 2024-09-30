@@ -20,5 +20,7 @@ NETFLIX-GPT
 -Bugfix- if the user is not logged in redirect/browse to login page and vice versa
 -unsubscribed to the onAuthStateChanged callback
 -add hardcoded values to the constants file
+-register tmdb API create an app && get an access token
+-get data from tmdb now playing movies list
 -fetch movies of TMDB 
 -
