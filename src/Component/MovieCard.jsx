@@ -1,8 +1,11 @@
+import { Img_CDN } from "../utils/constants"
 
 
-const MovieCard = () => {
+const MovieCard = ({poster_path}) => {
   return (
-    <div>MovieCard</div>
+    <div className="w-[200px] pr-4">
+      <img src={Img_CDN+poster_path} alt="imgcard" />
+    </div>
   )
 }
 
