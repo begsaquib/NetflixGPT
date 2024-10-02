@@ -31,6 +31,13 @@ NETFLIX-GPT
 -update store with trailer video data
 - embedded the youtube video and make it autoplay and mute
 - tailwind used to make ui look awesome
+-Build secondary component
+-Build movie list
+-build movie card
+-tmdb image cdn founded
+-we made the ui /browse page look beatiful with tailwind
+-made custom hook for different genre of movies
+-gpt search feature
 
 
 

@@ -16,4 +16,19 @@ export const API_OPTION = {
   },
 };
 
-export const Img_CDN="https://image.tmdb.org/t/p/w200/"
+export const Img_CDN = "https://image.tmdb.org/t/p/w200/";
+
+export const Supported_Lang = [
+  {
+    identifier: "en",
+    name: "English",
+  },
+  {
+    identifier: "Hindi",
+    name: "Hindi",
+  },
+  {
+    identifier: "Spanish",
+    name: "Spanish",
+  },
+];

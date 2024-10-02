@@ -14,7 +14,7 @@ import { Bg_URL, User_Logo } from "../utils/constants";
 const Login = () => {
   const [isSignin, setIsSignin] = useState(true);
   const [errormessege, setErrormessege] = useState(null);
- 
+
   const dispatch = useDispatch();
 
   const name = useRef(null);
@@ -56,12 +56,10 @@ const Login = () => {
                   photoURL: photoURL,
                 })
               );
-              
             })
             .catch((error) => {
               setErrormessege(error.messege);
             });
-         
         })
         .catch((error) => {
           const errorCode = error.code;
@@ -77,8 +75,6 @@ const Login = () => {
         .then((userCredential) => {
           // Signed in
           const user = userCredential.user;
-          console.log(user);
-         
         })
         .catch((error) => {
           const errorCode = error.code;
@@ -92,10 +88,7 @@ const Login = () => {
     <div>
       <Header />
       <div className="absolute">
-        <img
-          src={Bg_URL}
-          alt=""
-        />
+        <img src={Bg_URL} alt="" />
       </div>
       <form
         onSubmit={(e) => e.preventDefault()}
@@ -106,7 +99,7 @@ const Login = () => {
         </h1>
         {!isSignin && (
           <input
-          ref={name}
+            ref={name}
             type="text"
             placeholder="Full Name"
             className="p-2  my-2 w-full bg-gray-700"

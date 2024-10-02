@@ -3,7 +3,7 @@ import useTrailerVideo from "../customhook/useTrailerVideo";
 
 const VideoBg = ({ movieId }) => {
   const VideoTrailer = useSelector((store) => store.movies.movieTrailer);
-  console.log(VideoTrailer);
+ 
   
   useTrailerVideo(movieId);
   return (
